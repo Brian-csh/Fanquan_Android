@@ -51,7 +51,9 @@ public class EventRecViewAdapter extends RecyclerView.Adapter<EventRecViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         //set the data for each item in the recycler view
         holder.titleText.setText(eventList.get(position).getTitle());
-        holder.detailsText.setText(eventList.get(position).getDetails());
+
+        String details = eventList.get(position).getLocation() + " | " + eventList.get(position).getTime();
+        holder.detailsText.setText(details);
         holder.eventCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

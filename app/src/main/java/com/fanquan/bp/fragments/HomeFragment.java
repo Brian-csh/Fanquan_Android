@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.bp.R;
 import com.fanquan.bp.AddActivity;
@@ -24,12 +23,12 @@ import com.fanquan.bp.models.Event;
 import com.fanquan.bp.utils.OnEventClickedListener;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
     private RecyclerView eventRecView;
     private OnEventClickedListener onEventClickedListener;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -49,8 +48,10 @@ public class HomeFragment extends Fragment {
         eventRecView = parentView.findViewById(R.id.event_list_recycler);
 
         //set organization
-        TextView orgText = parentView.findViewById(R.id.home_org_textview);
-        orgText.setText("PKU");
+        Button orgButton = parentView.findViewById(R.id.home_org_button);
+        orgButton.setText("PKU");
+
+        //@todo: set the background image and text for announcement/ads
 
         initOnEventClickedListener();
 
@@ -88,10 +89,10 @@ public class HomeFragment extends Fragment {
 
         //sample
         ArrayList<Event> eventList = new ArrayList<Event>();
-        eventList.add(new Event("羽毛球", "总体，2023-2-12"));
-        eventList.add(new Event("篮球3v3", "紫荆篮球场，2023-2-10"));
-        eventList.add(new Event("篮球5v5", "紫荆篮球场，2023-1-20"));
-        eventList.add(new Event("排球", "北体，2023-1-5"));
+        eventList.add(new Event("羽毛球", "总体", "2023-2-12"));
+        eventList.add(new Event("篮球3v3", "紫荆篮球场", "2023-2-10"));
+        eventList.add(new Event("篮球5v5", "紫荆篮球场", "2023-1-20"));
+        eventList.add(new Event("排球", "北体", "2023-1-5"));
 
         displayActivities(eventList);
 
@@ -110,7 +111,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void setArticleList() {
-        //obtain the articles from the server
+        //obtain the articles from backend
 
     }
 

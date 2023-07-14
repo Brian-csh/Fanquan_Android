@@ -9,7 +9,7 @@
     android:gravity="start">
 
     <Button
-        android:id="@+id/home_org_textview"
+        android:id="@+id/home_org_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"

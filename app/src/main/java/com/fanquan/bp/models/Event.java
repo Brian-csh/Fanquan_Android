@@ -4,15 +4,29 @@ import java.io.Serializable;
 
 public class Event implements Serializable {
     private String title;
-    private String details;
-    //@todo add description, then separate time and location
+    private String location;
+    private String time;
 
-    public Event() {
+    public Event(String title, String location, String time) {
+        this.title = title;
+        this.location = location;
+        this.time = time;
     }
 
-    public Event(String title, String details) {
-        this.title = title;
-        this.details = details;
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getTitle() {
@@ -21,13 +35,5 @@ public class Event implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDetails() {
-        return details;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
     }
 }

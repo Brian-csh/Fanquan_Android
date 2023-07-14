@@ -25,13 +25,14 @@ public class EventActivity extends AppCompatActivity {
 
     private void displayContent() {
         String title = event.getTitle();
-        String details = event.getDetails();
+        String location = event.getLocation();
+        String time = event.getTime();
 
         //display it on the components
         TextView tvTitle = findViewById(R.id.event_activity_title_text);
         TextView tvDetails = findViewById(R.id.event_activity_details_text);
 
         tvTitle.setText(title);
-        tvDetails.setText(details);
+        tvDetails.setText("Location: " + location + "\n" + "Time: " + time);
     }
 }
