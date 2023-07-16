@@ -88,13 +88,14 @@ public class HomeFragment extends Fragment {
         });
 
         //sample
+        //actual data is obtained from backend
         ArrayList<Event> eventList = new ArrayList<Event>();
-        eventList.add(new Event("羽毛球", "总体", "2023-2-12"));
-        eventList.add(new Event("篮球3v3", "紫荆篮球场", "2023-2-10"));
-        eventList.add(new Event("篮球5v5", "紫荆篮球场", "2023-1-20"));
-        eventList.add(new Event("排球", "北体", "2023-1-5"));
+        eventList.add(new Event("羽毛球", "总体", "2023-2-12", "9:00-11:00"));
+        eventList.add(new Event("篮球3v3", "紫荆篮球场", "2023-2-10", "13:00-14:00"));
+        eventList.add(new Event("篮球5v5", "紫荆篮球场", "2023-1-20", "10:00-12:00"));
+        eventList.add(new Event("排球", "北体", "2023-1-5", "14:00-16:00"));
 
-        displayActivities(eventList);
+        displayEvents(eventList);
 
         return parentView;
     }
@@ -115,7 +116,7 @@ public class HomeFragment extends Fragment {
 
     }
 
-    private void displayActivities(List<Event> eventList) {
+    private void displayEvents(List<Event> eventList) {
 //        if (eventList.size() == 0)
 //            Toast.makeText(getActivity(), "No available activity data.", Toast.LENGTH_SHORT).show();
 
