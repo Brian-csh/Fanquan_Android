@@ -22,6 +22,7 @@ import com.fanquan.bp.models.Topic;
 import com.fanquan.bp.utils.OnTopicClickedListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -115,7 +116,7 @@ public class ForumFragment extends Fragment {
         return parentView;
     }
 
-    private void displayTopics(ArrayList<Topic> topicList) {
+    private void displayTopics(List<Topic> topicList) {
         TopicRecViewAdapter adapter = new TopicRecViewAdapter(getActivity(), topicList);
         adapter.setListener(onTopicClickedListener);
         topicRecView.setAdapter(adapter);
